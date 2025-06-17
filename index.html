@@ -45,9 +45,13 @@
       position: relative;
       background-color: var(--navy);
       color: var(--white);
-      padding: 215px;
+      padding: 100px 20px; /* Ajustado para ser más responsive */
       overflow: hidden;
       z-index: 1;
+      display: flex; /* Añadido para centrar el contenido */
+      align-items: center; /* Añadido para centrar el contenido */
+      justify-content: center; /* Añadido para centrar el contenido */
+      min-height: 100vh; /* Para que ocupe toda la altura de la vista */
     }
 
     .animated-bg {
@@ -94,11 +98,12 @@
       max-width: 960px;
       margin: 0 auto;
       text-align: center;
+      flex-direction: column; /* Predeterminado para móvil */
     }
 
     .profile-pic {
-      width: 270px;
-      height: 270px;
+      width: 200px; /* Ajustado para ser más pequeño en móvil */
+      height: 200px; /* Ajustado para ser más pequeño en móvil */
       border-radius: 50%;
       border: 4px solid var(--white);
       object-fit: cover;
@@ -111,12 +116,12 @@
     }
 
     .header-text h1 {
-      font-size: 2.8rem;
+      font-size: 2.2rem; /* Ajustado para pantallas pequeñas */
       margin-bottom: 1rem;
     }
 
     .header-text p {
-      font-size: 1.25rem;
+      font-size: 1.1rem; /* Ajustado para pantallas pequeñas */
       margin-bottom: 1.5rem;
     }
 
@@ -124,44 +129,43 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px; /* Espaciado ajustado para botones */
       margin-top: 20px;
     }
 
     .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  border: 2px solid var(--white);
-  color: var(--white);
-  padding: 10px 18px;
-  font-size: 1rem;
-  border-radius: 5px;
-  transition: 0.3s ease;
-  text-decoration: none;
-}
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: transparent;
+      border: 2px solid var(--white);
+      color: var(--white);
+      padding: 10px 18px;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: 0.3s ease;
+      text-decoration: none;
+    }
 
-.btn svg {
-  fill: currentColor;
-}
+    .btn svg {
+      fill: currentColor;
+    }
 
-.btn:hover {
-  background-color: var(--white);
-  color: var(--navy);
-}
-
+    .btn:hover {
+      background-color: var(--white);
+      color: var(--navy);
+    }
 
     /* --- Secciones generales --- */
     section {
-      padding: 100px 20px;
+      padding: 80px 20px; /* Ajustado el padding general */
     }
 
     /* --- Tecnologías --- */
     section#technologies {
       text-align: center;
-      padding-top: 80px;
-      padding-bottom: 120px;
+      padding-top: 60px; /* Ajustado */
+      padding-bottom: 100px; /* Ajustado */
     }
 
     section#technologies h2 {
@@ -170,35 +174,29 @@
 
     .tech-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Ajustado minmax */
+      gap: 30px; /* Reducido el gap */
       justify-items: center;
       align-items: center;
     }
 
-    .tech-item img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      transition: transform 0.3s ease;
-    }
+    .tech-item img,
     .tech-item svg {
-      width: 80px;
-      height: 80px;
+      width: 70px; /* Ajustado el tamaño de los iconos */
+      height: 70px; /* Ajustado el tamaño de los iconos */
       object-fit: contain;
       transition: transform 0.3s ease;
     }
 
-    .tech-item img:hover {
-      transform: scale(1.2);
-    }
+    .tech-item img:hover,
     .tech-item svg:hover {
-      transform: scale(1.2);
+      transform: scale(1.1); /* Ligeramente menos zoom para evitar desbordamientos */
     }
 
     .tech-item p {
-      margin-top: 10px;
+      margin-top: 8px; /* Ajustado el margen */
       font-weight: bold;
+      font-size: 0.9rem; /* Ajustado tamaño de fuente */
     }
 
     /* --- Proyectos --- */
@@ -206,8 +204,8 @@
       background-color: var(--navy);
       color: var(--white);
       text-align: center;
-      padding-top: 100px;
-      padding-bottom: 150px;
+      padding-top: 80px; /* Ajustado */
+      padding-bottom: 120px; /* Ajustado */
     }
 
     section#projects h2 {
@@ -216,8 +214,8 @@
 
     .projects-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado minmax */
+      gap: 30px; /* Reducido el gap */
     }
 
     .project-card {
@@ -235,10 +233,9 @@
 
     .project-card img {
       width: 100%;
-      height: 160px;
+      height: 150px; /* Ligeramente más pequeña */
       object-fit: cover;
-      max-width: 360px;
-      margin: 0 auto;
+      display: block; /* Para eliminar el espacio extra debajo de la imagen */
     }
 
     .project-card div {
@@ -247,29 +244,73 @@
 
     .project-card h3 {
       margin-bottom: 10px;
+      font-size: 1.2rem; /* Ajustado el tamaño del título */
     }
 
     .project-card a {
       font-weight: bold;
       color: var(--blue-accent);
+      font-size: 0.95rem; /* Ajustado el tamaño de la fuente del enlace */
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
+    /* --- Media Queries --- */
+
+    /* Para pantallas medianas (tablets y algunos laptops) */
+    @media (min-width: 601px) {
       .header-content {
-        flex-direction: column;
+        flex-direction: row; /* Vuelve a la dirección de fila */
+        text-align: left; /* Alinea el texto a la izquierda */
+        justify-content: center;
+      }
+
+      .profile-pic {
+        width: 270px;
+        height: 270px;
+      }
+
+      .header-text {
+        margin-top: 0; /* Elimina el margen superior si no es necesario */
       }
 
       .header-text h1 {
-        font-size: 2rem;
+        font-size: 2.8rem;
       }
 
       .header-text p {
-        font-size: 1rem;
+        font-size: 1.25rem;
       }
 
       .btn-group {
-        flex-direction: column;
+        flex-direction: row; /* Vuelve a la dirección de fila */
+        justify-content: flex-start; /* Alinea los botones a la izquierda */
+      }
+    }
+
+    /* Para pantallas muy pequeñas (móviles en modo landscape, etc.) */
+    @media (max-width: 480px) {
+      .header-text h1 {
+        font-size: 1.8rem;
+      }
+      .header-text p {
+        font-size: 0.95rem;
+      }
+      .btn {
+        width: 100%; /* Haz que los botones ocupen todo el ancho */
+        justify-content: center; /* Centra el contenido del botón */
+      }
+      .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Más columnas si el espacio lo permite */
+      }
+      .tech-item img,
+      .tech-item svg {
+        width: 60px;
+        height: 60px;
+      }
+      .tech-item p {
+        font-size: 0.8rem;
+      }
+      .projects-list {
+        grid-template-columns: 1fr; /* Una sola columna para proyectos en pantallas muy estrechas */
       }
     }
   </style>
@@ -285,43 +326,41 @@
         <p>Analista de datos Junior, Python Developer, Analista BI <br>
           Estudiante de Ingeniería en Sistemas</p>
         <div class="btn-group">
-  <a href="CV - Franco José Alvarez Castillo.pdf" download class="btn">
-    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm8 4H4v-2h16v2z" />
-    </svg>
-    <span>Descargar CV</span>
-  </a>
-  <a href="https://www.linkedin.com/in/francoalvarezcastillo/" target="_blank" class="btn">
-    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 
-      0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 
-      0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 
-      1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.268h-3v-4.604c0-1.1-.025-2.513-1.532-2.513-1.534 
-      0-1.768 1.197-1.768 2.433v4.684h-3v-9h2.881v1.233h.041c.401-.761 
-      1.379-1.562 2.838-1.562 3.034 0 3.594 1.997 3.594 4.593v4.736z"/>
-    </svg>
-    <span>LinkedIn</span>
-  </a>
-  <a href="https://github.com/FrancoAlvarez2002" target="_blank" class="btn">
-  <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 
-    9.8 8.205 11.387.6.113.82-.258.82-.577 
-    0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.612-4.042-1.612-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.084-.729.084-.729 
-    1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 
-    3.492.997.108-.776.418-1.304.762-1.604-2.665-.304-5.466-1.334-5.466-5.933 
-    0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 
-    0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 
-    3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 
-    2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 
-    5.625-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 
-    2.896-.015 3.286 0 .319.216.694.825.576C20.565 21.796 24 
-    17.3 24 12c0-6.627-5.373-12-12-12z"/>
-  </svg>
-  <span>GitHub</span>
-</a>
-
-</div>
-
+          <a href="CV - Franco José Alvarez Castillo.pdf" download class="btn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 16l4-5h-3V4h-2v7H8l4 5zm8 4H4v-2h16v2z" />
+            </svg>
+            <span>Descargar CV</span>
+          </a>
+          <a href="https://www.linkedin.com/in/francoalvarezcastillo/" target="_blank" class="btn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 
+              0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.268c-.966 
+              0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 
+              1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.268h-3v-4.604c0-1.1-.025-2.513-1.532-2.513-1.534 
+              0-1.768 1.197-1.768 2.433v4.684h-3v-9h2.881v1.233h.041c.401-.761 
+              1.379-1.562 2.838-1.562 3.034 0 3.594 1.997 3.594 4.593v4.736z"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/FrancoAlvarez2002" target="_blank" class="btn">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 
+              9.8 8.205 11.387.6.113.82-.258.82-.577 
+              0-.285-.01-1.04-.015-2.04-3.338.726-4.042-1.612-4.042-1.612-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.084-.729.084-.729 
+              1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 
+              3.492.997.108-.776.418-1.304.762-1.604-2.665-.304-5.466-1.334-5.466-5.933 
+              0-1.31.468-2.381 1.236-3.221-.124-.303-.536-1.523.117-3.176 
+              0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 
+              3.003.404 2.29-1.552 3.297-1.23 3.297-1.23.655 1.653.243 
+              2.873.12 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 
+              5.625-5.475 5.921.43.371.823 1.102.823 2.222 0 1.606-.015 
+              2.896-.015 3.286 0 .319.216.694.825.576C20.565 21.796 24 
+              17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -335,9 +374,9 @@
       </div>
       <div class="tech-item">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 630 630">
-  <rect width="630" height="630" fill="#f7df1e" />
-  <path d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" />
-</svg>
+          <rect width="630" height="630" fill="#f7df1e" />
+          <path d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" />
+        </svg>
         <p>JavaScript</p>
       </div>
 
@@ -351,57 +390,56 @@
       </div>
       <div class="tech-item">
         <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" version="1.1" id="svg19655">
-        <metadata id="metadata19659">
-          <rdf:RDF>
-            <cc:Work rdf:about="">
-              <dc:format>image/svg+xml</dc:format>
-              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-              <dc:title/>
-            </cc:Work>
-          </rdf:RDF>
-        </metadata>
-        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="200" y="0" width="1200" height="1600">
-          <path d="m 1333.25,0 c 36.86,0 66.75,29.8849 66.75,66.75 v 1466.5 c 0,36.86 -29.89,66.75 -66.75,66.75 H 266.667 C 229.848,1600 200,1570.15 200,1533.33 V 866.667 C 200,829.848 229.848,800 266.667,800 H 525 V 466.667 C 525,429.848 554.848,400 591.667,400 H 850 V 66.75 C 850,29.885 879.885,0 916.75,0 Z" fill="#ffffff" id="path19600"/>
-        </mask>
-        <g mask="url(#mask0)" id="g19611" transform="translate(-200)">
-          <path d="m 1400,66.75 v 1466.5 c 0,36.86 -29.89,66.75 -66.75,66.75 H 916.75 C 879.885,1600 850,1570.11 850,1533.25 V 66.75 C 850,29.885 879.885,0 916.75,0 h 416.5 c 36.87,0 66.75,29.8849 66.75,66.75 z" fill="url(#paint0_linear)" id="path19603" style="fill:url(#paint0_linear)"/>
-          <g filter="url(#filter0_dd)" id="g19607">
-            <path d="M 1075,466.667 V 1600 H 525 V 466.667 C 525,429.848 554.848,400 591.667,400 h 416.663 c 36.82,0 66.67,29.848 66.67,66.667 z" fill="url(#paint1_linear)" id="path19605" style="fill:url(#paint1_linear)"/>
+          <metadata id="metadata19659">
+            <rdf:RDF>
+              <cc:Work rdf:about="">
+                <dc:format>image/svg+xml</dc:format>
+                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+                <dc:title/>
+              </cc:Work>
+            </rdf:RDF>
+          </metadata>
+          <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="200" y="0" width="1200" height="1600">
+            <path d="m 1333.25,0 c 36.86,0 66.75,29.8849 66.75,66.75 v 1466.5 c 0,36.86 -29.89,66.75 -66.75,66.75 H 266.667 C 229.848,1600 200,1570.15 200,1533.33 V 866.667 C 200,829.848 229.848,800 266.667,800 H 525 V 466.667 C 525,429.848 554.848,400 591.667,400 H 850 V 66.75 C 850,29.885 879.885,0 916.75,0 Z" fill="#ffffff" id="path19600"/>
+          </mask>
+          <g mask="url(#mask0)" id="g19611" transform="translate(-200)">
+            <path d="m 1400,66.75 v 1466.5 c 0,36.86 -29.89,66.75 -66.75,66.75 H 916.75 C 879.885,1600 850,1570.11 850,1533.25 V 66.75 C 850,29.885 879.885,0 916.75,0 h 416.5 c 36.87,0 66.75,29.8849 66.75,66.75 z" fill="url(#paint0_linear)" id="path19603" style="fill:url(#paint0_linear)"/>
+            <g filter="url(#filter0_dd)" id="g19607">
+              <path d="M 1075,466.667 V 1600 H 525 V 466.667 C 525,429.848 554.848,400 591.667,400 h 416.663 c 36.82,0 66.67,29.848 66.67,66.667 z" fill="url(#paint1_linear)" id="path19605" style="fill:url(#paint1_linear)"/>
+            </g>
+            <path d="m 200,866.667 v 666.663 c 0,36.82 29.848,66.67 66.667,66.67 H 750 V 866.667 C 750,829.848 720.152,800 683.333,800 H 266.667 C 229.848,800 200,829.848 200,866.667 Z" fill="url(#paint2_linear)" id="path19609" style="fill:url(#paint2_linear)"/>
           </g>
-          <path d="m 200,866.667 v 666.663 c 0,36.82 29.848,66.67 66.667,66.67 H 750 V 866.667 C 750,829.848 720.152,800 683.333,800 H 266.667 C 229.848,800 200,829.848 200,866.667 Z" fill="url(#paint2_linear)" id="path19609" style="fill:url(#paint2_linear)"/>
-        </g>
-        <defs id="defs19653">
-          <filter id="filter0_dd" x="519.66699" y="396" width="560.66699" height="1210.67" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix" id="feFlood19613"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" id="feColorMatrix19615"/>
-            <feOffset dy="0.253333" id="feOffset19617"/>
-            <feGaussianBlur stdDeviation="0.253333" id="feGaussianBlur19619"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" id="feColorMatrix19621"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" id="feBlend19623"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" id="feColorMatrix19625"/>
-            <feOffset dy="1.33333" id="feOffset19627"/>
-            <feGaussianBlur stdDeviation="2.66667" id="feGaussianBlur19629"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" id="feColorMatrix19631"/>
-            <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" id="feBlend19633"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" id="feBlend19635"/>
-          </filter>
-          <linearGradient id="paint0_linear" x1="758.33301" y1="-1.49632e-05" x2="1447.8199" y2="1507.15" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#E6AD10" id="stop19638"/>
-            <stop offset="1" stop-color="#C87E0E" id="stop19640"/>
-          </linearGradient>
-          <linearGradient id="paint1_linear" x1="524.95502" y1="400" x2="1105.79" y2="1561.67" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#F6D751" id="stop19643"/>
-            <stop offset="1" stop-color="#E6AD10" id="stop19645"/>
-          </linearGradient>
-          <linearGradient id="paint2_linear" x1="199.955" y1="800" x2="519.784" y2="1581.6801" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#F9E589" id="stop19648"/>
-            <stop offset="1" stop-color="#F6D751" id="stop19650"/>
-          </linearGradient>
-        </defs>
-      </svg>
-  <p>Power BI</p>
-</div>
-
+          <defs id="defs19653">
+            <filter id="filter0_dd" x="519.66699" y="396" width="560.66699" height="1210.67" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix" id="feFlood19613"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" id="feColorMatrix19615"/>
+              <feOffset dy="0.253333" id="feOffset19617"/>
+              <feGaussianBlur stdDeviation="0.253333" id="feGaussianBlur19619"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0" id="feColorMatrix19621"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" id="feBlend19623"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" id="feColorMatrix19625"/>
+              <feOffset dy="1.33333" id="feOffset19627"/>
+              <feGaussianBlur stdDeviation="2.66667" id="feGaussianBlur19629"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" id="feColorMatrix19631"/>
+              <feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow" id="feBlend19633"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape" id="feBlend19635"/>
+            </filter>
+            <linearGradient id="paint0_linear" x1="758.33301" y1="-1.49632e-05" x2="1447.8199" y2="1507.15" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#E6AD10" id="stop19638"/>
+              <stop offset="1" stop-color="#C87E0E" id="stop19640"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear" x1="524.95502" y1="400" x2="1105.79" y2="1561.67" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F6D751" id="stop19643"/>
+              <stop offset="1" stop-color="#E6AD10" id="stop19645"/>
+            </linearGradient>
+            <linearGradient id="paint2_linear" x1="199.955" y1="800" x2="519.784" y2="1581.6801" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#F9E589" id="stop19648"/>
+              <stop offset="1" stop-color="#F6D751" id="stop19650"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <p>Power BI</p>
+      </div>
 
       <div class="tech-item">
         <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel" />
@@ -433,10 +471,6 @@
           <h3>Mas Proyectos</h3>
           <a href="https://github.com/FrancoAlvarez2002" target="_blank">Mi Github</a>
         </div>
-        
-      </div>
-      
-        
       </div>
     </div>
   </section>
